@@ -28,10 +28,10 @@ public class CardsController {
         Page<Card> cards = cardsProxy.getcards(pageNumber, length);
 
         TablePage<Card> result = new TablePage<Card>();
-        result.setData(cards.getContent());
+        /*result.setData(cards.getContent());
         result.setRecordsTotal(cards.getTotalElements());
         result.setRecordsFiltered(cards.getTotalElements());
-        result.setDraw(draw);
+        result.setDraw(draw);*/
         return result;
     }
 
