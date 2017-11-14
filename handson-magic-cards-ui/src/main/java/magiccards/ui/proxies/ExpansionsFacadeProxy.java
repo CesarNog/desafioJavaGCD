@@ -18,7 +18,7 @@ public interface ExpansionsFacadeProxy {
     Expansion getExpansionById(@PathVariable("id") String gathererId);
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
-    Page<Expansion> getexpansions(@RequestParam(value="page")int pageNumber, @RequestParam(value="size")int size);
+    Page<Expansion> getExpansions(@RequestParam(value="page")int pageNumber, @RequestParam(value="size")int size);
 
     @RequestMapping(value = "", method = RequestMethod.POST, consumes = "application/json")
     void create(Expansion expansion);

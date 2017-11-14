@@ -30,13 +30,13 @@ public class ExpansionsController {
     public @ResponseBody TablePage<Expansion> listPaged(@RequestParam("draw")int draw, @RequestParam("start")int start,@RequestParam("length")int length) {
 
         int pageNumber = (start/length) + 1;
-        Page<Expansion> expansions = expansionsProxy.getexpansions(pageNumber, length);
+        Page<Expansion> expansions = expansionsProxy.getExpansions(pageNumber, length);
 
         TablePage<Expansion> result = new TablePage<Expansion>();
-       /* result.setData(cards.getContent());
-        result.setRecordsTotal(cards.getTotalElements());
-        result.setRecordsFiltered(cards.getTotalElements());
-        result.setDraw(draw);*/
+        result.setData(expansions.getContent());
+        result.setRecordsTotal(expansions.getTotalElements());
+        result.setRecordsFiltered(expansions.getTotalElements());
+        result.setDraw(draw);        
         return result;
     }
 

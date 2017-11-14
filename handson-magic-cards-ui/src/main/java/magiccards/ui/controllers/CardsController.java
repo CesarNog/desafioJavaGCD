@@ -25,13 +25,13 @@ public class CardsController {
     public @ResponseBody TablePage<Card> listPaged(@RequestParam("draw")int draw, @RequestParam("start")int start,@RequestParam("length")int length) {
 
         int pageNumber = (start/length) + 1;
-        Page<Card> cards = cardsProxy.getcards(pageNumber, length);
+        Page<Card> cards = cardsProxy.getCards(pageNumber, length);
 
         TablePage<Card> result = new TablePage<Card>();
-        /*result.setData(cards.getContent());
+        result.setData(cards.getContent());
         result.setRecordsTotal(cards.getTotalElements());
         result.setRecordsFiltered(cards.getTotalElements());
-        result.setDraw(draw);*/
+        result.setDraw(draw);
         return result;
     }
 

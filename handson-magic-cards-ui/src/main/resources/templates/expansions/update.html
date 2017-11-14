@@ -9,7 +9,7 @@
         <div id="page" class="container" th:fragment="layout :: site-content">
             <div id="content" >
                 <div class="title">
-                    <h2>Expansions List</h2>
+                    <h2>Update Expansion</h2>
                 </div>
                 <form action="/cards/expansion/update" th:object="${card}" method="post">
                     <label for="expansionId">Expansion Id:</label>
@@ -30,6 +30,7 @@
 	                <input type="checkbox" id="isPromo" name="isPromo" th:value="*{isPromo}"/><br /><br />
 	                <label for="isLegal">Legal:</label>
 	                <input type="checkbox" id="isLegal" name="isLegal" th:value="*{isLegal}"/><br /><br />
+                    
                     <button type="submit">Submit</button>
                 </form>
             </div>

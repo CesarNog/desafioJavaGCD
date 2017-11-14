@@ -17,7 +17,7 @@ public interface CardsFacadeProxy {
     Card getCardById(@PathVariable("id") String gathererId);
 
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
-    Page<Card> getcards(@RequestParam(value="page")int pageNumber, @RequestParam(value="size")int size);
+    Page<Card> getCards(@RequestParam(value="page")int pageNumber, @RequestParam(value="size")int size);
 
     @RequestMapping(value = "", method = RequestMethod.POST, consumes = "application/json")
     void create(Card card);
